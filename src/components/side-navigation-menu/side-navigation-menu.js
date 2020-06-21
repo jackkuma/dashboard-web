@@ -1,10 +1,10 @@
 import React, { useRef, useCallback } from 'react';
-
+import AccordionItem from './Accordion';
 import NavigationMenu from './navigation-menu';
 import DatePick from './date-picked';
 
 import './side-navigation-menu.scss';
-import './date-picked.scss';
+import './date-pick.css';
 import * as events from 'devextreme/events';
 
 export default function (props) {
@@ -33,10 +33,13 @@ export default function (props) {
     >
       {children}
       <div className={'menu-container'}>
-        <NavigationMenu />
+        <AccordionItem />
       </div>
       <div className={'menu-container'}>
         <DatePick />
+      </div>
+      <div className={'menu-container'}>
+        <NavigationMenu />
       </div>
     </div>
   );

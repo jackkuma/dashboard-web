@@ -1,5 +1,5 @@
 import '../node_modules/devextreme/dist/css/dx.common.css';
-import '../node_modules/devextreme/dist/css/dx.light.css';
+import '../node_modules/devextreme/dist/css/dx.material.blue.dark.compact.css';
 import './themes/generated/theme.base.css';
 import './themes/generated/theme.additional.css';
 import React from 'react';
