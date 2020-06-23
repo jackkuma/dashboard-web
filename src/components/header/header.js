@@ -2,6 +2,7 @@ import React from 'react';
 import Toolbar, { Item } from 'devextreme-react/toolbar';
 import Button from 'devextreme-react/button';
 import UserPanel from '../user-panel/user-panel';
+import HomeMenu from '../model/ModelHomeButton'; 
 import './header.scss';
 import { Template } from 'devextreme-react/core/template';
 
@@ -23,7 +24,7 @@ export default ({ menuToggleEnabled, title, toggleMenu, userMenuItems }) => (
         visible={!!title}
       />
       <Item
-        location={'after'}
+        location={'before'}
         locateInMenu={'auto'}
         menuItemTemplate={'userPanelTemplate'}
       >
@@ -39,6 +40,18 @@ export default ({ menuToggleEnabled, title, toggleMenu, userMenuItems }) => (
       <Template name={'userPanelTemplate'}>
         <UserPanel menuMode={'list'} />
       </Template>
+      <Item
+        location={'after'}
+        widget={'dxButton'}
+      >
+        <HomeMenu />
+      </Item>
+      <Item
+        location={'after'}
+        widget={'dxButton'}
+      >
+        <Button icon="help" stylingMode="text" />
+      </Item>
     </Toolbar>
   </header>
 );
