@@ -7,4 +7,10 @@
     padding: 10px;
     height: calc(100vh - 76px);
     z-index: 100;
+    animation: move 1s;
+}
+
+@keyframes move {
+    0% { opacity: 0;}
+    100% { right: 0; opacity: 1;}
 }
