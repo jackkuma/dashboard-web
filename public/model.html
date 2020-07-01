@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>React App</title>
+    
+  </head>
+  <body>
+    <p style="color: #fff;">我是第二個iFrame</p>
+  </body>
+  <script>
+    //回調函數
+    function receiveMessageFromIndex ( event ) {
+      console.log( '我是iframe2,我接收到了：', event.data );
+    }
+
+//監聽message事件
+window.addEventListener("message", receiveMessageFromIndex, false);
+</script>
+</html>
